@@ -1,7 +1,7 @@
 <?php
 	if (!isset($_COOKIE['visite'])) $_COOKIE['visite'] = 0;
 	$visite = $_COOKIE['visite'] + 1;
-	setcookie('visite',$visite,time()+86400*365);
+	setcookie('visite',$visite,time()+86400*7);
 ?>
 
 <html>
@@ -19,4 +19,4 @@
 		?>
         <br><br><input type="button" value="Ricarica la pagina" onClick="window.location.reload()">
     </font></body>
-</html>
+</html>
