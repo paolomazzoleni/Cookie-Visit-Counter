@@ -1,20 +1,17 @@
 <?php
-    $tempo=time()+86400*7;
-	if (!isset($_COOKIE['visite'])) {
-    	$_COOKIE['visite'] = 0;
-    }
-    else{
-		$visite = $_COOKIE['visite'] + 1;
-    }
-	setcookie('visite',$visite,$tempo);
+if (!isset($_COOKIE['visite'])){
+$_COOKIE['visite'] = 0;
+}
+else{
+$visite = $_COOKIE['visite'] + 1;
+}
+setcookie('visite',$visite,time()+86400*7);
 ?>
-
 <html>
-	<head>
-    	<title>Cookie Counter</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- utilizzata per responsive-->
-    </head>
-    <body bgcolor="#77B2C9" align="center"><font face="calibri" size="5">
+<head>
+<title> Cookie Counter </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- utilizzata per responsive--></head>
+<body bgcolor="#77B2C9" align="center"><font face="calibri" size="5">
     	<h1>Cookie Counter</h1>
         <?php
 			if ($visite > 1) 
