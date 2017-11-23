@@ -1,7 +1,12 @@
 <?php
-	if (!isset($_COOKIE['visite'])) $_COOKIE['visite'] = 0;
-	$visite = $_COOKIE['visite'] + 1;
-	setcookie('visite',$visite,time()+86400*7);
+	if (!isset($_COOKIE['visite'])) {
+    	$tempo=time()+86400*7;
+    	$_COOKIE['visite'] = 0;
+    }
+    else{
+		$visite = $_COOKIE['visite'] + 1;
+    }
+	setcookie('visite',$visite,$tempo);
 ?>
 
 <html>
