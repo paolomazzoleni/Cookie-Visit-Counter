@@ -1,6 +1,6 @@
 <?php
+    $tempo=time()+86400*7;
 	if (!isset($_COOKIE['visite'])) {
-    	$tempo=time()+86400*7;
     	$_COOKIE['visite'] = 0;
     }
     else{
